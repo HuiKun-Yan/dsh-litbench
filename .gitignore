@@ -1,0 +1,28 @@
+# runtime data — never commit papers, keys or caches
+data/
+data-*/
+
+node_modules/
+
+# plugin build artifacts (public/ is copied in at release time, local dev uses a junction)
+plugin/public/
+plugin/server.cjs
+
+# tooling scratch output
+tools/*.log
+tools/shot-*.png
+tools/*.png.bak
+*.bak
+*.bak-*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# secrets
+key.txt
+*.env
+.env*
