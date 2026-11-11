@@ -134,7 +134,7 @@ public/
 npm run build:plugin     # 从 server.js 生成 plugin/server.cjs，并把 public/ 真实拷贝进 plugin/public/
 ```
 
-安装：把 `plugin/` 软链到 DSH profile 的 `node_modules/dsh-litbench`，
+安装：dsh plugin --profile desktop add dsh-litbench，
 并在 profile 的 `package.json` 里加上 `dsh.profile.bundles` 条目。详见 `plugin/README.md`。
 
 ---
