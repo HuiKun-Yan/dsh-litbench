@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文献工作台 · LitBench</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f6b5c'/%3E%3Cpath d='M8 10h9a3 3 0 0 1 3 3v9H11a3 3 0 0 1-3-3z' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="reader.css">
+</head>
+<body>
+<script>window.LB_BASE=(function(){var p=location.pathname;if(/\/index\.html$/.test(p))p=p.replace(/\/index\.html$/,"/");return p.replace(/\/$/,"");})();</script>
+<div class="app">
+  <header class="topbar">
+    <button class="icon-btn" id="btnPanel" title="收起侧栏 (Ctrl+B)" aria-pressed="true">◧</button>
+    <a class="brand" href="#/" title="LitBench">
+      <span class="brand-mark">◫</span>
+      <span class="brand-text"><b>文献工作台</b><i>LitBench</i></span>
+    </a>
+    <div class="topsearch">
+      <span class="ts-ic">⌕</span>
+      <input id="globalSearch" type="search" placeholder="搜索标题、正文…" autocomplete="off" spellcheck="false">
+      <div id="searchPop" class="search-pop hidden"></div>
+    </div>
+    <div class="topbar-right">
+      <button class="icon-btn" id="btnLang" title="Language / 语言"><span id="langLabel">中</span></button>
+      <button class="icon-btn" id="btnTheme" title="Theme / 主题">◐</button>
+      <button class="icon-btn" id="btnHelp" title="Help / 帮助">?</button>
+      <button class="icon-btn" id="btnSettings" title="Settings / 设置">⚙</button>
+    </div>
+  </header>
+  <div class="body-shell">
+    <nav class="rail" id="rail"></nav>
+    <main class="view" id="view"></main>
+  </div>
+</div>
+
+<div id="toast" class="toast-wrap"></div>
+<div id="modalRoot"></div>
+<div id="selMenu" class="selmenu hidden"></div>
+<div id="popover" class="popover hidden"></div>
+<div id="dropOverlay" class="drop-overlay hidden">
+  <div class="drop-card">
+    <div class="drop-ic">⇪</div>
+    <b>松开以上传论文</b>
+    <span>支持多篇 · 原始排版与图片完整保留</span>
+  </div>
+</div>
+<input type="file" id="filePicker" accept="application/pdf,.pdf" multiple hidden>
+<div id="loading" class="boot-loading"><div class="spinner"></div><span>正在启动工作台…</span></div>
+
+<script type="module" src="js/core.js"></script>
+<script type="module" src="js/layout.js"></script>
+<script type="module" src="js/reader.js"></script>
+<script type="module" src="js/insights.js"></script>
+<script type="module" src="js/chat.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
