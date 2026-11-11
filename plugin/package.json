@@ -1,0 +1,59 @@
+{
+  "name": "dsh-litbench",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "description": "LitBench — 文献阅读分析工作台（分区检索 / 英译中 / 图表解读 / 跨文档综合 / 论证结构树），以 DSH 插件形式随宿主 Web GUI 运行。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HuiKun-Yan/dsh-litbench.git",
+    "directory": "plugin"
+  },
+  "homepage": "https://github.com/HuiKun-Yan/dsh-litbench/tree/main/plugin#readme",
+  "bugs": {
+    "url": "https://github.com/HuiKun-Yan/dsh-litbench/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "litbench",
+    "literature",
+    "pdf",
+    "reading",
+    "research"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "files": [
+    "index.js",
+    "server.cjs",
+    "client.js",
+    "cordis.patch.yml",
+    "public/",
+    "icon.jpg",
+    "README.md"
+  ]
+}

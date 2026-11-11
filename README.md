@@ -1,6 +1,3 @@
-# DSH-dsh-litbench
-Local-first PDF literature reading AI analysis workstation.
-
 # LitBench
 
 **本地优先的 PDF 文献阅读 + AI 分析工作台。**
@@ -10,6 +7,7 @@ Local-first PDF literature reading AI analysis workstation.
 
 想先看全貌再决定要不要装？读 [**概览**](docs/OVERVIEW.md)：功能地图、设计取舍、三层阅读法的使用方式。
 
+![文献库](docs/library.png)
 
 ---
 
@@ -26,6 +24,8 @@ Local-first PDF literature reading AI analysis workstation.
 | **论证结构树** | 论点 → 前提 / 证据 / 推理 / 结论 / 反例，分层折叠，带原文引文与页码 |
 | **跨文档综合** | 把正文与关联的 SI / 审稿意见一起分析：摘要、互相印证、矛盾张力、SI 补充细节、审稿质疑 |
 | **对话** | 针对全文或选中段落问答，SSE 流式输出，回答中的页码可点击跳转 |
+
+![阅读器](docs/reader.png)
 
 ---
 

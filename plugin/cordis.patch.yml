@@ -1,0 +1,7 @@
+# dsh-litbench bundle patch: host plugin (HTTP prefix /dsh-litbench) and
+# client entry (sidebar panel "文献工作台" hosting the workbench iframe).
+# Activate by listing "dsh-litbench" in the profile's dsh.profile.bundles
+# (and adding it to dependencies), then restarting DSH.
+- insert:
+    - id: dsh-litbench
+      name: dsh-litbench
